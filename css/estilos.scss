@@ -54,6 +54,11 @@ header{
       bottom: 140px;
       left: 40px;
     }
+    &__item:nth-child(3){
+      color: #181743;
+      bottom: 30px;
+      left: 130px;
+    }
   }
   .vida{
     position: absolute;
@@ -112,7 +117,7 @@ header{
 .contenedor{
   background-color: #181743;
   width: 200vw;
-  height: 100vw;
+  height: 100vh;
   position: absolute;
   left: 0;
   top: 0px;
@@ -143,6 +148,18 @@ header{
         z-index: -1;
         border-radius: 50%;
       }
+      .aro{
+        position: absolute;
+        border-radius: 100%;
+	      transform: rotate(-30deg);
+        z-index: 20;
+      }
+      .aro-tra{
+        position: absolute;
+        z-index: -10;
+        border-radius: 100%;
+        transform: rotate(-30deg);
+      }
     }
     .item1{
       top: calc(50vh - 125px);
@@ -165,6 +182,16 @@ header{
         left: -20px;
         top: -20px;
         background: linear-gradient(150deg,rgba(249,2,109,.5) 0%,transparent 50%);
+      }
+      .aro,.aro-tra{
+        width:220px;
+      	height:40px;
+      	border: 10px solid #f9026d;
+        left: -33px;
+        top: 60px;
+      }
+      .aro{
+        border-top: 10px solid transparent;
       }
     }
     .item2{
@@ -189,6 +216,16 @@ header{
         top: -25px;
         background: linear-gradient(150deg,rgba(190,49,68,.4) 0%,transparent 60%);
       }
+      .aro,.aro-tra{
+        width:320px;
+	      height:40px;
+      	border: 20px solid #872341;
+        left: -43px;
+	      top: 100px;
+      }
+      .aro{
+        border-top: 20px solid transparent;
+      }
     }
     .item3{
       top: calc(30vh - 125px);
@@ -211,6 +248,16 @@ header{
         left: -10px;
         top: -10px;
         background: linear-gradient(150deg,rgba(255,255,255,.4) 0%,transparent 60%);
+      }
+      .aro,.aro-tra{
+        width:120px;
+	      height:40px;
+      	border: 5px solid white;
+        left: -10px;
+	      top: 35px;
+      }
+      .aro{
+        border-top: 5px solid transparent;
       }
     }
     .item4{
@@ -235,6 +282,16 @@ header{
         top: -10px;
         background: linear-gradient(150deg,rgba(255,255,255,.8) 0%,transparent 50%);
       }
+      .aro,.aro-tra{
+        width:150px;
+	      height:40px;
+      	border: 10px solid #FEA096;
+        left: -15px;
+	      top: 45px;
+      }
+      .aro{
+        border-top: 10px solid transparent;
+      }
     }
     .item5{
       top: 70vh;
@@ -251,6 +308,16 @@ header{
       top: -10px;
       background: linear-gradient(150deg,rgba(255,255,255,.4) 0%,transparent 50%);
       }
+      .aro,.aro-tra{
+        width:150px;
+	      height:40px;
+      	border: 10px solid #D3F6D1;
+        left: -15px;
+	      top: 45px;
+      }
+      .aro{
+        border-top: 10px solid transparent;
+      }
     }
     .item6{
       top: 40vh;
@@ -266,6 +333,16 @@ header{
         left: -15px;
         top: -15px;
         background: linear-gradient(150deg,rgba(255,255,255,.4) 0%,transparent 50%);
+      }
+      .aro,.aro-tra{
+        width:200px;
+	      height:40px;
+      	border: 10px solid #F3CD97;
+        left: -15px;
+	      top: 65px;
+      }
+      .aro{
+        border-top: 10px solid transparent;
       }
     }
   }
@@ -299,46 +376,6 @@ header{
   }
   p:nth-child(even){
     animation: 2s pares infinite;
-  }
-  .estrella1{
-    top: 80vh;
-    left: 10%;
-  }
-  .estrella2{
-    top: 30vh;
-    left: 30%;
-  }
-  .estrella3{
-    top: 70vh;
-    left: 37%;
-  }
-  .estrella4{
-    top: 15vh;
-    left: 57%;
-  }
-  .estrella5{
-    top: 90vh;
-    left: 67%;
-  }
-  .estrella6{
-    top: 50vh;
-    left: 70%;
-  }
-  .estrella7{
-    top: 10vh;
-    left: 80%;
-  }
-  .estrella8{
-    top: 95vh;
-    left: 90%;
-  }
-  .estrella9{
-    top: 35vh;
-    left: 95%;
-  }
-  .estrella10{
-    top: 5vh;
-    left: 5%;
   }
 }
 .contenedor-cometa{
@@ -948,5 +985,16 @@ header{
   }
   40%{
     opacity: 1;
+  }
+}
+@media (max-width: 400px){
+  .menu,.submenu,.contenedor__planeta__item{
+    transform: scale(.3);
+  }
+  .vida{
+    transform: scale(.3) translateX(-480px);
+  }
+  .contenedor-fantasma,.contenedor-ene__enemigo{
+    transform: scale(.5);
   }
 }

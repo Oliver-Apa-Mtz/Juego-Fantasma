@@ -64,6 +64,12 @@ header .submenu__item:nth-child(1) {
   left: 40px;
 }
 
+header .submenu__item:nth-child(3) {
+  color: #181743;
+  bottom: 30px;
+  left: 130px;
+}
+
 header .vida {
   position: absolute;
   left: 10px;
@@ -130,7 +136,7 @@ header .puntos p {
 .contenedor {
   background-color: #181743;
   width: 200vw;
-  height: 100vw;
+  height: 100vh;
   position: absolute;
   left: 0;
   top: 0px;
@@ -172,6 +178,24 @@ header .puntos p {
   border-radius: 50%;
 }
 
+.contenedor__planeta__item .aro {
+  position: absolute;
+  border-radius: 100%;
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+  z-index: 20;
+}
+
+.contenedor__planeta__item .aro-tra {
+  position: absolute;
+  z-index: -10;
+  border-radius: 100%;
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+
 .contenedor__planeta .item1 {
   top: calc(50vh - 125px);
   left: 5vw;
@@ -197,6 +221,18 @@ header .puntos p {
   left: -20px;
   top: -20px;
   background: linear-gradient(150deg, rgba(249, 2, 109, 0.5) 0%, transparent 50%);
+}
+
+.contenedor__planeta .item1 .aro, .contenedor__planeta .item1 .aro-tra {
+  width: 220px;
+  height: 40px;
+  border: 10px solid #f9026d;
+  left: -33px;
+  top: 60px;
+}
+
+.contenedor__planeta .item1 .aro {
+  border-top: 10px solid transparent;
 }
 
 .contenedor__planeta .item2 {
@@ -226,6 +262,18 @@ header .puntos p {
   background: linear-gradient(150deg, rgba(190, 49, 68, 0.4) 0%, transparent 60%);
 }
 
+.contenedor__planeta .item2 .aro, .contenedor__planeta .item2 .aro-tra {
+  width: 320px;
+  height: 40px;
+  border: 20px solid #872341;
+  left: -43px;
+  top: 100px;
+}
+
+.contenedor__planeta .item2 .aro {
+  border-top: 20px solid transparent;
+}
+
 .contenedor__planeta .item3 {
   top: calc(30vh - 125px);
   left: 70vw;
@@ -251,6 +299,18 @@ header .puntos p {
   left: -10px;
   top: -10px;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.4) 0%, transparent 60%);
+}
+
+.contenedor__planeta .item3 .aro, .contenedor__planeta .item3 .aro-tra {
+  width: 120px;
+  height: 40px;
+  border: 5px solid white;
+  left: -10px;
+  top: 35px;
+}
+
+.contenedor__planeta .item3 .aro {
+  border-top: 5px solid transparent;
 }
 
 .contenedor__planeta .item4 {
@@ -280,6 +340,18 @@ header .puntos p {
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.8) 0%, transparent 50%);
 }
 
+.contenedor__planeta .item4 .aro, .contenedor__planeta .item4 .aro-tra {
+  width: 150px;
+  height: 40px;
+  border: 10px solid #FEA096;
+  left: -15px;
+  top: 45px;
+}
+
+.contenedor__planeta .item4 .aro {
+  border-top: 10px solid transparent;
+}
+
 .contenedor__planeta .item5 {
   top: 70vh;
   left: 15vw;
@@ -299,6 +371,18 @@ header .puntos p {
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
 }
 
+.contenedor__planeta .item5 .aro, .contenedor__planeta .item5 .aro-tra {
+  width: 150px;
+  height: 40px;
+  border: 10px solid #D3F6D1;
+  left: -15px;
+  top: 45px;
+}
+
+.contenedor__planeta .item5 .aro {
+  border-top: 10px solid transparent;
+}
+
 .contenedor__planeta .item6 {
   top: 40vh;
   left: 85vw;
@@ -316,6 +400,18 @@ header .puntos p {
   left: -15px;
   top: -15px;
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+}
+
+.contenedor__planeta .item6 .aro, .contenedor__planeta .item6 .aro-tra {
+  width: 200px;
+  height: 40px;
+  border: 10px solid #F3CD97;
+  left: -15px;
+  top: 65px;
+}
+
+.contenedor__planeta .item6 .aro {
+  border-top: 10px solid transparent;
 }
 
 .contenedor__planeta:nth-child(1) {
@@ -360,56 +456,6 @@ header .puntos p {
 .estrellas p:nth-child(even) {
   -webkit-animation: 2s pares infinite;
   animation: 2s pares infinite;
-}
-
-.estrellas .estrella1 {
-  top: 80vh;
-  left: 10%;
-}
-
-.estrellas .estrella2 {
-  top: 30vh;
-  left: 30%;
-}
-
-.estrellas .estrella3 {
-  top: 70vh;
-  left: 37%;
-}
-
-.estrellas .estrella4 {
-  top: 15vh;
-  left: 57%;
-}
-
-.estrellas .estrella5 {
-  top: 90vh;
-  left: 67%;
-}
-
-.estrellas .estrella6 {
-  top: 50vh;
-  left: 70%;
-}
-
-.estrellas .estrella7 {
-  top: 10vh;
-  left: 80%;
-}
-
-.estrellas .estrella8 {
-  top: 95vh;
-  left: 90%;
-}
-
-.estrellas .estrella9 {
-  top: 35vh;
-  left: 95%;
-}
-
-.estrellas .estrella10 {
-  top: 5vh;
-  left: 5%;
 }
 
 .contenedor-cometa {
@@ -1288,5 +1334,23 @@ header .puntos p {
   }
   40% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  .menu, .submenu, .contenedor__planeta__item {
+    -webkit-transform: scale(0.3);
+    -ms-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+  .vida {
+    -webkit-transform: scale(0.3) translateX(-480px);
+    -ms-transform: scale(0.3) translateX(-480px);
+    transform: scale(0.3) translateX(-480px);
+  }
+  .contenedor-fantasma, .contenedor-ene__enemigo {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
   }
 }

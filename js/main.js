@@ -1,6 +1,7 @@
 $(document).ready(function(){
   var requestAnimationFrame = window.requestAnimationFrame;
   var alto_pantalla = screen.height;
+  var ancho_pantalla = screen.width;
   var division = alto_pantalla / 6;
   var posicion_fantasma = $('#cara').offset();
   var posi_fanX = posicion_fantasma.left;
@@ -9,8 +10,17 @@ $(document).ready(function(){
   var posi_fanYfin = posicion_fantasma.top + 90;
   var intervalo;
   var menu = 0;
-  var puntos = 0;
-  var muerte = 0;
+  var puntos;
+  var muerte;
+  var posiciones_altas = {};
+  //estrellas
+  setInterval(function(){
+    for(var estre = 1; estre <= 30; estre++){
+      var posi_estreX = generador_random(1,100);
+      var posi_estreY = generador_random(1,100);
+      $('.estrella'+estre).css({'left':posi_estreX+'vw','top':posi_estreY+'vh'});
+    }
+  },2000)
   //mostrar menu
   $('.menu').click(function(){
         if(menu == 0){
@@ -63,14 +73,18 @@ $(document).ready(function(){
     cambio_propi();
     //posicion del fantasma
     $('#jugar').click(function(){
+      juego();
+      $('.submenu').addClass('grande');
+      setTimeout(function(){
+          $('.submenu').removeClass('grande');
+          $('.submenu').removeAttr('style');
+      },1000)
+      menu = 0;
+      if(ancho_pantalla < 400){
+        $('.contenedor-fantasma').css({'left':'40vw'})
+      }else{
         $('.contenedor-fantasma').css({'left':'70vw'})
-        juego();
-        $('.submenu').addClass('grande');
-        setTimeout(function(){
-            $('.submenu').removeClass('grande');
-            $('.submenu').removeAttr('style');
-        },1000)
-        menu = 0;
+      }
     })
     //controles del juego
     var alturamax = screen.height - 140;
@@ -107,6 +121,11 @@ $(document).ready(function(){
     var anchomax = screen.width;
     var altomax = screen.height;
     function juego(){
+      puntos = 0;
+      muerte = 0;
+      $('.puntos p').text(puntos);
+      $('.vida p').removeAttr('style');
+      cambio_propi();
       $('.contenedor-ene__enemigo').css({'animation-name':'enemigo','opacity':'1'})
       intervalo = setInterval(function(){
         for (var e = 1;e <= 15;e++){
@@ -123,10 +142,6 @@ $(document).ready(function(){
                 if(posi_eneX > 1100){
                   puntos++;
                   $('.puntos p').text(puntos);
-                  if(puntos == 100){
-                    var nivel2 = generador_random(8,15);
-                    $('.contenedor-ene__enemigo').css({'animation-duration':nivel2+'s'});
-                  }
                 }
             }else{
                 muerte++;
@@ -135,6 +150,7 @@ $(document).ready(function(){
                   clear();
                   $('.contenedor-ene__enemigo').removeAttr('style');
                   $('.contenedor-fantasma').removeAttr('style');
+
                 }
             }
           }

@@ -15,6 +15,7 @@ html(lang="es")
       .submenu
         a.fa.fa-github-alt.submenu__item(href="https://github.com/Oliver-Apa-Mtz",target="_blank")
         i#jugar.fa.fa-play.submenu__item
+        i.fa.fa-list-ol.submenu__item  
       .vida
         p 
       .puntos
@@ -28,8 +29,10 @@ html(lang="es")
             div(class="contenedor__planeta__item item"+i)
               .planeta
               .brillo
+              .aro
+              .aro-tra    
     .estrellas
-      - for (var e = 1; e <= 10; e++)
+      - for (var e = 1; e <= 30; e++)
         p(class="estrella"+e)
     .contenedor-cometa
       - for (var c = 1; c <= 3; c++)
@@ -70,5 +73,5 @@ html(lang="es")
         .rostro
           p
           p
-          p
+          p       
     script(src="js/main.js")
