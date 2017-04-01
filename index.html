@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Juego-Fantasma</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta charset="utf-8">
+    <script src="https://use.fontawesome.com/76c55944ed.js"> </script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/jquery-3.2.0.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="menu"><i class="fa fa-bars menu__item"></i></div>
+      <div class="submenu"><a class="fa fa-github-alt submenu__item" href="https://github.com/Oliver-Apa-Mtz" target="_blank"></a><i class="fa fa-play submenu__item" id="jugar"></i></div>
+      <div class="vida">
+        <p> </p>
+      </div>
+      <div class="puntos">
+        <p> </p>
+      </div>
+    </header>
+    <p class="fa fa-caret-up arriba ayuda"></p>
+    <p class="fa fa-caret-down abajo ayuda">        </p>
+    <section class="contenedor">
+      <div class="contenedor__planeta">
+        <div class="contenedor__planeta__item item1">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item2">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item3">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item4">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item5">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item6">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+      </div>
+      <div class="contenedor__planeta">
+        <div class="contenedor__planeta__item item1">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item2">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item3">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item4">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item5">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+        <div class="contenedor__planeta__item item6">
+          <div class="planeta"></div>
+          <div class="brillo"></div>
+        </div>
+      </div>
+    </section>
+    <div class="estrellas">
+      <p class="estrella1"></p>
+      <p class="estrella2"></p>
+      <p class="estrella3"></p>
+      <p class="estrella4"></p>
+      <p class="estrella5"></p>
+      <p class="estrella6"></p>
+      <p class="estrella7"></p>
+      <p class="estrella8"></p>
+      <p class="estrella9"></p>
+      <p class="estrella10"></p>
+    </div>
+    <div class="contenedor-cometa">
+      <div class="contenedor-cometa__item">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="contenedor-cometa__item">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="contenedor-cometa__item">
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+    <div class="contenedor-ene">
+      <div class="contenedor-ene__enemigo" id="ene1">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene2">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene3">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene4">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene5">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene6">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene7">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene8">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene9">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene10">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene11">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene12">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene13">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene14">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+      <div class="contenedor-ene__enemigo" id="ene15">
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <p class="bola-cuerpo"></p>
+        <div class="ojo"></div>
+        <div class="boca">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+        <p class="lengua"></p>
+        <p class="brazo1"></p>
+        <p class="brazo2"></p>
+        <p class="pelo"></p>
+      </div>
+    </div>
+    <div class="contenedor-fantasma">
+      <div class="contenedor-fantasma__item">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="contenedor-fantasma__item">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+      <div class="contenedor-fantasma__item">
+        <p></p>
+        <p></p>
+      </div>
+      <div class="contenedor-fantasma__item" id="cara">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <div class="rostro">
+          <p></p>
+          <p></p>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

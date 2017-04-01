@@ -1,0 +1,74 @@
+doctype html
+html(lang="es")
+  head
+    title Juego-Fantasma
+    meta(name="viewport",content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1")
+    meta(charset="utf-8")
+    script(src="https://use.fontawesome.com/76c55944ed.js")  
+    link(rel="stylesheet",href="css/normalize.css")
+    link(rel="stylesheet",href="css/estilos.css")
+    script(src="js/jquery-3.2.0.min.js")
+  body
+    header
+      .menu
+        i.fa.fa-bars.menu__item
+      .submenu
+        a.fa.fa-github-alt.submenu__item(href="https://github.com/Oliver-Apa-Mtz",target="_blank")
+        i#jugar.fa.fa-play.submenu__item
+      .vida
+        p 
+      .puntos
+        p 
+    p.fa.fa-caret-up.arriba.ayuda
+    p.fa.fa-caret-down.abajo.ayuda         
+    section.contenedor
+      - for(var d = 1; d <= 2; d++)
+        div(class="contenedor__planeta")
+          - for (var i = 1; i <= 6; i++)
+            div(class="contenedor__planeta__item item"+i)
+              .planeta
+              .brillo
+    .estrellas
+      - for (var e = 1; e <= 10; e++)
+        p(class="estrella"+e)
+    .contenedor-cometa
+      - for (var c = 1; c <= 3; c++)
+        .contenedor-cometa__item
+          p
+          p
+    .contenedor-ene
+      - for(var ene = 1; ene <= 15; ene++)
+        .contenedor-ene__enemigo(id="ene"+ene)
+          - for(var bola = 1; bola <= 7; bola++)
+           p.bola-cuerpo
+          .ojo
+          .boca
+            p
+            p
+            p
+          p.lengua
+          p.brazo1
+          p.brazo2
+          p.pelo
+    .contenedor-fantasma
+      .contenedor-fantasma__item
+        p
+        p
+        p
+      .contenedor-fantasma__item
+        p
+        p
+        p
+      .contenedor-fantasma__item
+        p
+        p
+      .contenedor-fantasma__item#cara
+        p
+        p
+        p
+        p
+        .rostro
+          p
+          p
+          p
+    script(src="js/main.js")
