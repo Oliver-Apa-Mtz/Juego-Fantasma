@@ -1,13 +1,12 @@
 $(document).ready(function(){
-  var requestAnimationFrame = window.requestAnimationFrame;
   var alto_pantalla = screen.height;
   var ancho_pantalla = screen.width;
-  var division = alto_pantalla / 6;
-  var posicion_fantasma = $('#cara').offset();
-  var posi_fanX = posicion_fantasma.left;
-  var posi_fanY = posicion_fantasma.top;
-  var posi_fanXfin = posicion_fantasma.left + 120;
-  var posi_fanYfin = posicion_fantasma.top + 90;
+  var division = alto_pantalla / 5;
+  var fantasma = $('#cara').offset();
+  var posi_fanX = fantasma.left;
+  var posi_fanY = fantasma.top;
+  var posi_fanXfin = posi_fanX + 120;
+  var posi_fanYfin = posi_fanY + 90;
   var intervalo;
   var menu = 0;
   var puntos;
@@ -24,7 +23,7 @@ $(document).ready(function(){
   //mostrar menu
   $('.menu').click(function(){
         if(menu == 0){
-            $('.submenu').css({'top':'-200px','right':'-200px'})
+            $('.submenu').css({'top':'-200px','right':'-200px'});
             $('.submenu').addClass('grande');
             setTimeout(function(){
                 $('.submenu').removeClass('grande');
@@ -44,11 +43,11 @@ $(document).ready(function(){
         return Math.floor(Math.random()*(max-min+1)+min);
     }
     function cambio_propi(){
-        for(var pe = 1; pe <= 15;pe++){
+        for(var pe = 1; pe <= 10;pe++){
           var posi = generador_random(500,1500);
-          var tiem = generador_random(10,25);
-          var retra = generador_random(5,15);
-          $('#ene'+pe).css({'left':-posi,'animation-duration':tiem+'s','animation-delay':retra+'s'})
+          var tiem = generador_random(8,30);
+          var retra = generador_random(5,25);
+          $('#malo'+pe).css({'left':-posi,'animation-duration':tiem+'s','animation-delay':retra+'s'})
         }
     }
     function clear(){
@@ -65,8 +64,6 @@ $(document).ready(function(){
           case 3: $(enemi).css({'top':(division * 3)+'px'});
               break;
           case 4: $(enemi).css({'top':(division * 4)+'px'});
-              break;
-          case 5: $(enemi).css({'top':(division * 5)+'px'});
               break;
       }
     }
@@ -91,28 +88,27 @@ $(document).ready(function(){
     var teclado = {};
     var posiy = parseInt($('.contenedor-fantasma').css('top'));
     $(document).keydown(function boton (e){
-        posicion_fantasma = $('#cara').offset();
-        posi_fanX = posicion_fantasma.left;
-        posi_fanY = posicion_fantasma.top;
-        posi_fanXfin = posicion_fantasma.left + 120;
-        posi_fanYfin = posicion_fantasma.top + 90;
+        fantasma = $('#cara').offset();
+        posi_fanX = fantasma.left;
+        posi_fanY = fantasma.top;
+        posi_fanXfin = posi_fanX + 120;
+        posi_fanYfin = posi_fanY + 90;
         teclado[e.keyCode] = true;
         if(teclado[38]){
             if(posiy > 5){
-                posiy --;
+                posiy -= 50;
                 $('.contenedor-fantasma').css({'top':posiy});
             }else if(posiy <= 5){
                 //console.log('te pasastes putito');
             }
         }else if(teclado[40]){
             if(posiy < alturamax){
-                posiy ++;
+                posiy += 50;
                 $('.contenedor-fantasma').css({'top':posiy});
             }else if(posiy > alturamax){
                 //console.log('te pasastes putito');
             }
         }
-        requestAnimationFrame(boton);
     });
     $(document).keyup(function(e){
         teclado[e.keyCode] = false;
@@ -126,21 +122,21 @@ $(document).ready(function(){
       $('.puntos p').text(puntos);
       $('.vida p').removeAttr('style');
       cambio_propi();
-      $('.contenedor-ene__enemigo').css({'animation-name':'enemigo','opacity':'1'})
+      $('.malo').css({'animation-name':'enemigo','opacity':'1'})
       intervalo = setInterval(function(){
-        for (var e = 1;e <= 15;e++){
-          var posicion_enemigo = $('#ene'+e).offset();
+        for (var e = 1;e <= 10;e++){
+          var posicion_enemigo = $('#malo'+e).offset();
           var posi_eneX = posicion_enemigo.left;
-          var posi_eneXfin = posicion_enemigo.left + 120;
+          var posi_eneXfin = posicion_enemigo.left + 100;
           var posi_eneY = posicion_enemigo.top;
           var posi_eneYfin = posicion_enemigo.top + 100;
           if(posi_eneX < -400 && posi_eneX > -410){
-            var altura_ene = generador_random(0,5);
-            altura_aleatoria(altura_ene,'#ene'+e);
+            var altura_ene = generador_random(0,4);
+            altura_aleatoria(altura_ene,'#malo'+e);
           }else if(posi_eneXfin >= posi_fanX && posi_eneX <= posi_fanXfin){
             if(posi_eneY > posi_fanYfin || posi_eneYfin < posi_fanY){
-                if(posi_eneX > 1100){
-                  puntos++;
+                if(posi_eneX > 1000){
+                  puntos += 2;
                   $('.puntos p').text(puntos);
                 }
             }else{
@@ -148,7 +144,7 @@ $(document).ready(function(){
                 $('.vida p').css({'width':muerte})
                 if(muerte == 401){
                   clear();
-                  $('.contenedor-ene__enemigo').removeAttr('style');
+                  $('.malo').removeAttr('style');
                   $('.contenedor-fantasma').removeAttr('style');
 
                 }

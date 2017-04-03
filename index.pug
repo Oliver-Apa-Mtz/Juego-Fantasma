@@ -30,7 +30,9 @@ html(lang="es")
               .planeta
               .brillo
               .aro
-              .aro-tra    
+              .aro-tra 
+    .planeta-fondo
+        p
     .estrellas
       - for (var e = 1; e <= 30; e++)
         p(class="estrella"+e)
@@ -40,19 +42,15 @@ html(lang="es")
           p
           p
     .contenedor-ene
-      - for(var ene = 1; ene <= 15; ene++)
-        .contenedor-ene__enemigo(id="ene"+ene)
-          - for(var bola = 1; bola <= 7; bola++)
-           p.bola-cuerpo
-          .ojo
-          .boca
-            p
-            p
-            p
-          p.lengua
-          p.brazo1
-          p.brazo2
-          p.pelo
+      - for(var ene = 1; ene <= 10; ene++)
+        .malo(id="malo"+ene)
+            .cara
+              p
+              p
+            .cuerpo
+              p
+            .cola
+            .cola
     .contenedor-fantasma
       .contenedor-fantasma__item
         p
@@ -73,5 +71,5 @@ html(lang="es")
         .rostro
           p
           p
-          p       
+          p
     script(src="js/main.js")

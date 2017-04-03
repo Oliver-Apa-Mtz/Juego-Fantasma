@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: #181743;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -134,7 +135,6 @@ header .puntos p {
 }
 
 .contenedor {
-  background-color: #181743;
   width: 200vw;
   height: 100vh;
   position: absolute;
@@ -431,6 +431,61 @@ header .puntos p {
   animation-delay: 20s;
 }
 
+.planeta-fondo {
+  position: absolute;
+  width: 150vh;
+  height: 150vh;
+  left: 10%;
+  top: 60vh;
+  border-radius: 50%;
+  background: linear-gradient(#E41655, transparent 20%);
+  box-shadow: 0px -50px 150px #E41655, 0px -50px 170px orange;
+}
+
+.planeta-fondo:before {
+  position: absolute;
+  content: "";
+  width: 30vh;
+  height: 30vh;
+  top: -60vh;
+  left: -15%;
+  border-radius: 50%;
+  background: linear-gradient(#CF56A1, transparent 70%);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  box-shadow: 0px -20px 100px #CF56A1, 0px -80px 150px #66D37E;
+}
+
+.planeta-fondo:after {
+  position: absolute;
+  content: "";
+  width: 50vh;
+  height: 50vh;
+  top: -40vh;
+  right: -25%;
+  border-radius: 50%;
+  background: linear-gradient(#14FFEC, transparent 70%);
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  box-shadow: 0px -30px 130px #14FFEC, 0px -70px 130px crimson;
+}
+
+.planeta-fondo p {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: -60vh;
+  left: 60%;
+  background-color: transparent;
+  box-shadow: 0px 100px 100px #1A554F;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 .estrellas {
   width: 100%;
   height: 100vh;
@@ -547,212 +602,6 @@ header .puntos p {
   z-index: 200;
 }
 
-.contenedor-ene__enemigo {
-  opacity: 0;
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background-color: springgreen;
-  -webkit-animation: infinite linear;
-  animation: infinite linear;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: springgreen;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo:nth-child(2) {
-  bottom: -5px;
-  left: 20px;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo:nth-child(3) {
-  bottom: 20px;
-  right: -10px;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo:nth-child(4) {
-  bottom: 0px;
-  left: 50px;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo:nth-child(5) {
-  top: 40px;
-  left: -3px;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo:nth-child(6) {
-  top: -5px;
-  right: 3px;
-}
-
-.contenedor-ene__enemigo .bola-cuerpo:nth-child(7) {
-  top: 25px;
-  right: -10px;
-}
-
-.contenedor-ene__enemigo .ojo {
-  width: 25px;
-  height: 25px;
-  position: absolute;
-  border-radius: 50%;
-  right: 15px;
-  top: 5px;
-  background-color: #872341;
-}
-
-.contenedor-ene__enemigo .ojo:before {
-  content: "";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 0px;
-  bottom: 5px;
-  border-radius: 50%;
-  background-color: crimson;
-}
-
-.contenedor-ene__enemigo .ojo:after {
-  content: "";
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: black;
-  right: 5px;
-  bottom: 10px;
-}
-
-.contenedor-ene__enemigo .boca {
-  position: absolute;
-  right: -13px;
-  top: 25px;
-  width: 0px;
-  height: 0px;
-  border-right: 20px solid transparent;
-  border-left: 20px solid transparent;
-  border-top: 50px solid #872341;
-  border-radius: 50%;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.contenedor-ene__enemigo .boca p {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #F6EB9A;
-  -webkit-transform: rotate(-25deg);
-  -ms-transform: rotate(-25deg);
-  transform: rotate(-25deg);
-  border: 1px solid black;
-}
-
-.contenedor-ene__enemigo .boca p:nth-child(1) {
-  top: -39px;
-  left: -13px;
-}
-
-.contenedor-ene__enemigo .boca p:nth-child(2) {
-  top: -49px;
-  left: -18px;
-}
-
-.contenedor-ene__enemigo .boca p:nth-child(3) {
-  top: -28px;
-  left: -8px;
-}
-
-.contenedor-ene__enemigo .lengua {
-  position: absolute;
-  width: 10px;
-  height: 25px;
-  border-radius: 5px;
-  bottom: 17px;
-  right: -18px;
-  background-color: #FF6F6F;
-}
-
-.contenedor-ene__enemigo .lengua:before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 22px;
-  border-radius: 5px;
-  background-color: #FF6F6F;
-  -webkit-transform: rotate(-65deg);
-  -ms-transform: rotate(-65deg);
-  transform: rotate(-65deg);
-  top: -10px;
-  left: -9px;
-}
-
-.contenedor-ene__enemigo .brazo1 {
-  position: absolute;
-  width: 40px;
-  top: 70px;
-  left: 25px;
-  height: 10px;
-  border-radius: 5px;
-  background: linear-gradient(90deg, transparent, limegreen 50%);
-  -webkit-transform: rotate(65deg);
-  -ms-transform: rotate(65deg);
-  transform: rotate(65deg);
-}
-
-.contenedor-ene__enemigo .brazo2 {
-  position: absolute;
-  width: 40px;
-  top: 75px;
-  left: 45px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: limegreen;
-  -webkit-transform: rotate(-40deg);
-  -ms-transform: rotate(-40deg);
-  transform: rotate(-40deg);
-}
-
-.contenedor-ene__enemigo .pelo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 0px;
-  height: 0px;
-  border-left: 30px solid #453C38;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.contenedor-ene__enemigo .pelo:before, .contenedor-ene__enemigo .pelo:after {
-  content: "";
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  border-left: 30px solid #453C38;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-}
-
-.contenedor-ene__enemigo .pelo:before {
-  top: -5px;
-  left: -25px;
-}
-
-.contenedor-ene__enemigo .pelo:after {
-  top: -25px;
-  right: -5px;
-}
-
 .contenedor-fantasma {
   position: absolute;
   z-index: 200;
@@ -760,7 +609,7 @@ header .puntos p {
   height: 130px;
   top: calc(50vh - 70px);
   left: calc(50vw - 150px);
-  transition: all 1s;
+  transition: all .5s;
 }
 
 .contenedor-fantasma__item {
@@ -1001,7 +850,7 @@ header .puntos p {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #4A4A4A;
   position: absolute;
 }
 
@@ -1031,12 +880,114 @@ header .puntos p {
   position: absolute;
   width: 25px;
   height: 7px;
-  background-color: black;
+  background-color: #4A4A4A;
   top: 20px;
   left: 5px;
   border-bottom-left-radius: 90px;
   border-bottom-right-radius: 90px;
-  border-bottom: 4px solid #000;
+  border-bottom: 4px solid #4A4A4A;
+}
+
+.malo {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  left: -500px;
+  z-index: 200;
+  -webkit-animation: infinite linear;
+  animation: infinite linear;
+}
+
+.malo .cara {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-top-right-radius: 77px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 80px;
+  background: aliceblue;
+}
+
+.malo .cara p {
+  width: 16px;
+  height: 26px;
+  background-color: #4A4A4A;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 70px;
+  z-index: 10;
+}
+
+.malo .cara p:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background-color: lightpink;
+  border-radius: 3px;
+  top: 30px;
+}
+
+.malo .cara p:nth-child(1) {
+  -webkit-transform: rotate(-25deg) scale(0.7);
+  -ms-transform: rotate(-25deg) scale(0.7);
+  transform: rotate(-25deg) scale(0.7);
+}
+
+.malo .cara p:nth-child(2) {
+  left: 50px;
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+.malo .cuerpo {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-bottom-right-radius: 358px;
+  border-top-left-radius: 200px;
+  background-color: aliceblue;
+  top: 48px;
+}
+
+.malo .cuerpo p {
+  position: absolute;
+  top: 30px;
+  width: 15px;
+  height: 25px;
+  background-color: #4A4A4A;
+  border-radius: 50%;
+  right: 25px;
+  -webkit-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+
+.malo .cola {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: aliceblue;
+  bottom: 2px;
+  left: -20px;
+}
+
+.malo .cola:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: aliceblue;
+}
+
+.malo .cola:nth-child(4) {
+  bottom: 35px;
 }
 
 @-webkit-keyframes cometa3 {
