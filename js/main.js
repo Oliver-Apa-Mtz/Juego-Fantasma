@@ -129,7 +129,7 @@ $(document).ready(function(){
           var posi_eneX = posicion_enemigo.left;
           var posi_eneXfin = posicion_enemigo.left + 100;
           var posi_eneY = posicion_enemigo.top;
-          var posi_eneYfin = posicion_enemigo.top + 100;
+          var posi_eneYfin = posicion_enemigo.top + 120;
           if(posi_eneX < -400 && posi_eneX > -410){
             var altura_ene = generador_random(0,4);
             altura_aleatoria(altura_ene,'#malo'+e);
